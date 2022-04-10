@@ -54,7 +54,5 @@ build/
 ### VS Code ###
 .vscode/
 
-db/docker/mongodb_data_container/
-db/docker/docker-compose.yml
-db/docker/init_access.js
+db/docker/
 src/main/resources/application.properties
