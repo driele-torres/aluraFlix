@@ -53,3 +53,4 @@ build/
 
 ### VS Code ###
 .vscode/
+db/docker/mongodb_data_container/

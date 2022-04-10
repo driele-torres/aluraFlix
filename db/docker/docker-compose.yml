@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  database:
+    image: 'mongo'
+    container_name: 'mongo-container-alura'
+    environment:
+      MONGO_INITDB_DATABASE:
+      MONGO_INITDB_ROOT_USERNAME:
+      MONGO_INITDB_ROOT_PASSWORD:
+    volumes:
+      - ./init_access.js:/docker-entrypoint-initdb.d/init_access.js:ro
+      - ./mongodb_data_container:/data/db
+    ports:
+      - "27017:27017"
