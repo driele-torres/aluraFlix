@@ -1,0 +1,15 @@
+version: "2.0"
+services:
+  mongodb_container:
+    image: mongo:latest
+    container_name:  'mongo-container-alura'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - ./init_access.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./mongodb_data_container:/data/db
+    ports:
+      - "27017:27017"
+volumes:
+  mongodb_data_container:
